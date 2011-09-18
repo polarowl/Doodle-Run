@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0207A3E114261CAD00D9EB6F /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0207A3E014261CAD00D9EB6F /* heart.png */; };
+		0207A3FD142638F500D9EB6F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0207A3FC142638F500D9EB6F /* pause.png */; };
+		0207A4001426395000D9EB6F /* pause_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 0207A3FF1426395000D9EB6F /* pause_selected.png */; };
+		0207A40314263C1100D9EB6F /* enemy_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0207A40114263C1100D9EB6F /* enemy_left.png */; };
+		0207A40414263C1100D9EB6F /* enemy_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0207A40214263C1100D9EB6F /* enemy_right.png */; };
 		0209247914222053002DA5F7 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0209247814222053002DA5F7 /* bullet.png */; };
 		020BA95514226A9500694934 /* Mainmenubutton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 020BA95414226A9500694934 /* Mainmenubutton.gif */; };
 		020BA95714226B3600694934 /* newgamebutton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 020BA95614226B3600694934 /* newgamebutton.gif */; };
@@ -142,7 +146,6 @@
 		0219F01D140FFC54000031F9 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219F01C140FFC54000031F9 /* Enemy.m */; };
 		0219F021140FFC63000031F9 /* EnemyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219F020140FFC63000031F9 /* EnemyFactory.m */; };
 		0219F0241410026E000031F9 /* EnemyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219F0231410026E000031F9 /* EnemyView.m */; };
-		0223F33C14136745000382BD /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 0223F33B14136745000382BD /* enemy.png */; };
 		023CAADC141CE41200B4D9A8 /* continuebutton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023CAAD8141CE41100B4D9A8 /* continuebutton.gif */; };
 		023CAADD141CE41200B4D9A8 /* Exitbutton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023CAAD9141CE41100B4D9A8 /* Exitbutton.gif */; };
 		023CAADE141CE41200B4D9A8 /* pauseBackground.gif in Resources */ = {isa = PBXBuildFile; fileRef = 023CAADA141CE41100B4D9A8 /* pauseBackground.gif */; };
@@ -167,6 +170,10 @@
 /* Begin PBXFileReference section */
 		0207A3E014261CAD00D9EB6F /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = Resources/heart.png; sourceTree = "<group>"; };
 		0207A3E314261DB200D9EB6F /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		0207A3FC142638F500D9EB6F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = Resources/pause.png; sourceTree = "<group>"; };
+		0207A3FF1426395000D9EB6F /* pause_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause_selected.png; path = Resources/pause_selected.png; sourceTree = "<group>"; };
+		0207A40114263C1100D9EB6F /* enemy_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy_left.png; path = Resources/enemy_left.png; sourceTree = "<group>"; };
+		0207A40214263C1100D9EB6F /* enemy_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy_right.png; path = Resources/enemy_right.png; sourceTree = "<group>"; };
 		0209247814222053002DA5F7 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = Resources/bullet.png; sourceTree = "<group>"; };
 		020BA95414226A9500694934 /* Mainmenubutton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Mainmenubutton.gif; path = Resources/Mainmenubutton.gif; sourceTree = "<group>"; };
 		020BA95614226B3600694934 /* newgamebutton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = newgamebutton.gif; path = Resources/newgamebutton.gif; sourceTree = "<group>"; };
@@ -430,7 +437,6 @@
 		0219F020140FFC63000031F9 /* EnemyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyFactory.m; sourceTree = "<group>"; };
 		0219F0221410026D000031F9 /* EnemyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyView.h; sourceTree = "<group>"; };
 		0219F0231410026E000031F9 /* EnemyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyView.m; sourceTree = "<group>"; };
-		0223F33B14136745000382BD /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy.png; path = Resources/enemy.png; sourceTree = "<group>"; };
 		023CAAD8141CE41100B4D9A8 /* continuebutton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = continuebutton.gif; path = Resources/continuebutton.gif; sourceTree = "<group>"; };
 		023CAAD9141CE41100B4D9A8 /* Exitbutton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Exitbutton.gif; path = Resources/Exitbutton.gif; sourceTree = "<group>"; };
 		023CAADA141CE41100B4D9A8 /* pauseBackground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pauseBackground.gif; path = Resources/pauseBackground.gif; sourceTree = "<group>"; };
@@ -540,6 +546,10 @@
 		02148D8113FD73A0002A3492 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0207A40114263C1100D9EB6F /* enemy_left.png */,
+				0207A40214263C1100D9EB6F /* enemy_right.png */,
+				0207A3FF1426395000D9EB6F /* pause_selected.png */,
+				0207A3FC142638F500D9EB6F /* pause.png */,
 				0207A3E014261CAD00D9EB6F /* heart.png */,
 				02543D981424B7970093EC33 /* icon_health.png */,
 				020BA96114227E6800694934 /* settingsButton.gif */,
@@ -555,7 +565,6 @@
 				023CAADA141CE41100B4D9A8 /* pauseBackground.gif */,
 				023CAADB141CE41200B4D9A8 /* pausebutton.gif */,
 				02AEA376141CB73E006FD510 /* player_hurt.png */,
-				0223F33B14136745000382BD /* enemy.png */,
 				02F1BE99140A7E07001B97BF /* button.png */,
 				02148F0913FD85ED002A3492 /* ground.png */,
 				02148F0413FD7E08002A3492 /* background.png */,
@@ -1000,7 +1009,6 @@
 				02148F0513FD7E08002A3492 /* background.png in Resources */,
 				02148F0A13FD85ED002A3492 /* ground.png in Resources */,
 				02F1BE9A140A7E07001B97BF /* button.png in Resources */,
-				0223F33C14136745000382BD /* enemy.png in Resources */,
 				02AEA377141CB73E006FD510 /* player_hurt.png in Resources */,
 				023CAADC141CE41200B4D9A8 /* continuebutton.gif in Resources */,
 				023CAADD141CE41200B4D9A8 /* Exitbutton.gif in Resources */,
@@ -1016,6 +1024,10 @@
 				020BA96214227E6800694934 /* settingsButton.gif in Resources */,
 				02543D991424B7970093EC33 /* icon_health.png in Resources */,
 				0207A3E114261CAD00D9EB6F /* heart.png in Resources */,
+				0207A3FD142638F500D9EB6F /* pause.png in Resources */,
+				0207A4001426395000D9EB6F /* pause_selected.png in Resources */,
+				0207A40314263C1100D9EB6F /* enemy_left.png in Resources */,
+				0207A40414263C1100D9EB6F /* enemy_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

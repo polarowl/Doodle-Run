@@ -184,7 +184,12 @@
     for (Bullet *bullet in self.bullets)
     {
         for (Enemy *enemy in self.enemies) {
-            if ((abs(bullet.position.x - enemy.position.x) < 10) && (abs(bullet.position.y - enemy.position.y)<20) )
+            if ((abs(bullet.position.x - enemy.position.x) < 10) && 
+                 ( 
+                    ( (bullet.position.y - enemy.position.y > 0)  && (bullet.position.y - enemy.position.y <30)) || 
+                    ( (enemy.position.y - bullet.position.y > 0) && (enemy.position.y - bullet.position.y < 5) ) 
+                 )
+            )
             {                                            
                 [bullet explode];
                 [self.bullets removeObject:bullet];

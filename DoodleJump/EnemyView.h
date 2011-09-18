@@ -15,12 +15,11 @@
 @interface EnemyView : CCNode <EnemyDelegate> {
 
     World *world; 
-    NSMutableArray *enemyList;
+
     NSMutableDictionary *enemyViewDict;
     
 }
 @property (retain) World *world;
-@property (retain) NSMutableArray *enemyList;
 @property (retain) NSMutableDictionary *enemyViewDict;
 
 - (id)initWithWorld:(World *)aWorld;

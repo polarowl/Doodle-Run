@@ -38,8 +38,9 @@
         
         // pause menu
         _pauseScreenUp=FALSE;
-        CCMenuItem *pauseMenuItem = [CCMenuItemImage itemFromNormalImage:@"pausebutton.gif" selectedImage:@"pausebutton.gif" target:self selector:@selector(PauseButtonTapped:)];
-        pauseMenuItem.position = ccp(40, 285);
+        CCMenuItem *pauseMenuItem = [CCMenuItemImage itemFromNormalImage:@"pause.png" selectedImage:@"pause_selected.png" target:self selector:@selector(PauseButtonTapped:)];
+        pauseMenuItem.position = ccp(30, 290);
+        pauseMenuItem.scale = 0.25;
         CCMenu *upgradeMenu = [CCMenu menuWithItems:pauseMenuItem, nil];
         upgradeMenu.position = CGPointZero;
         [self addChild:upgradeMenu z:2];

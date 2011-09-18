@@ -11,7 +11,7 @@
 
 @implementation EnemyView
 
-@synthesize enemyList, enemyViewDict;
+@synthesize enemyViewDict;
 @synthesize world;
 
 - (id)initWithWorld:(World *)aWord
@@ -26,7 +26,12 @@
         
         for(Enemy *enemy in self.world.enemies)
         {
-            CCSprite *enemySprite = [CCSprite spriteWithFile:@"enemy.png"];
+            NSString *imageName;
+            
+            if (enemy.xVelocity >= 0) imageName = @"enemy_right.png";
+            else imageName = @"enemy_left.png";
+            
+            CCSprite *enemySprite = [CCSprite spriteWithFile:imageName];
             
             enemySprite.position = CGPointMake(enemy.position.x,enemy.position.y);
             enemySprite.scale = 0.3;
@@ -55,8 +60,12 @@
     
     for(Enemy *enemy in newEnemies)
     {
+        NSString *imageName;
         
-        CCSprite *enemySprite = [CCSprite spriteWithFile:@"enemy.png"];
+        if (enemy.xVelocity >= 0) imageName = @"enemy_right.png";
+        else imageName = @"enemy_left.png";
+        
+        CCSprite *enemySprite = [CCSprite spriteWithFile:imageName];
         
         enemySprite.position = CGPointMake(enemy.position.x,enemy.position.y);
         enemySprite.scale = 0.3;
@@ -73,14 +82,30 @@
 - (void)enemyUpdated:(Enemy *)enemy
 {
     CCSprite *enemySprite = [enemyViewDict objectForKey:[NSString stringWithFormat:@"%d",enemy.index]];
-    enemySprite.position = enemy.position;    
+    enemySprite.position = enemy.position;
+
+}
+
+- (void)removeDeadEnemiesSprites
+{
+    for (CCSprite *enemySprite in [self.enemyViewDict allValues]) {
+        if ([enemySprite scale]==0)
+            [self removeChild:enemySprite cleanup:YES];
+    }
 }
 
 - (void)deleteEnemy:(Enemy *)enemy
 {
+    [self removeDeadEnemiesSprites];
+    
     CCSprite *enemySprite = [enemyViewDict objectForKey:[NSString stringWithFormat:@"%d",enemy.index]];
-    [self removeChild:enemySprite cleanup:YES];
-    //[self.enemyList removeObject:enemy];
+    CCAction *scaling = [CCScaleTo actionWithDuration:0.5 scale:0];
+    [enemySprite runAction:scaling];
+    
+    CCAction *rotateAction = [CCRotateTo actionWithDuration:0.5 angle:-270];
+    [enemySprite runAction:rotateAction];
+    
+    //[self removeChild:enemySprite cleanup:YES];    
 }
 
 @end
