@@ -86,18 +86,18 @@
     pauseLayer.position = CGPointZero;
     [self addChild: pauseLayer z:8];
     
-    _pauseScreen =[[CCSprite spriteWithFile:@"pauseBackground.gif"] retain];
+    _pauseScreen =[[CCSprite spriteWithFile:@"background-menu.png"] retain];
     _pauseScreen.position= ccp(250,150);
     [self addChild:_pauseScreen z:8];
      
     CCMenuItem *MainMenuItem = [CCMenuItemImage
-                                itemFromNormalImage:@"blankbutton.gif" selectedImage:@"blankbutton.gif"
+                                itemFromNormalImage:@"menu_button.png" selectedImage:@"menu_button_highlighted.png"
                                 target:self selector:@selector(MainMenuButtonTapped:)];
     
-    CCLabelTTF* mainMenuIconLabel = [CCLabelTTF labelWithString:@"Main menu" dimensions:CGSizeMake(100, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeWordWrap fontName:@"Courier" fontSize:20];
+    CCLabelTTF* mainMenuIconLabel = [CCLabelTTF labelWithString:@"Main menu" dimensions:CGSizeMake(140, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeWordWrap fontName:@"Courier" fontSize:20];
     
 	mainMenuIconLabel.color = ccc3(255,255,255);
-	mainMenuIconLabel.position = ccp(50,25);
+	mainMenuIconLabel.position = ccp(70,25);
 	mainMenuIconLabel.tag = 1;
 	[MainMenuItem addChild:mainMenuIconLabel];
     
@@ -119,13 +119,13 @@
      */
     
     CCMenuItem *restartMenuItem = [CCMenuItemImage
-                                itemFromNormalImage:@"blankbutton.gif" selectedImage:@"blankbutton.gif"
+                                itemFromNormalImage:@"menu_button.png" selectedImage:@"menu_button_highlighted.png"
                                 target:self selector:@selector(NewGameButtonTapped:)];
     
-	CCLabelTTF* restartIconLabel = [CCLabelTTF labelWithString:@"Restart" dimensions:CGSizeMake(100, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap fontName:@"Courier" fontSize:20];
+	CCLabelTTF* restartIconLabel = [CCLabelTTF labelWithString:@"Restart" dimensions:CGSizeMake(140, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap fontName:@"Courier" fontSize:20];
     
 	restartIconLabel.color = ccc3(255,255,255);
-	restartIconLabel.position = ccp(50,25);
+	restartIconLabel.position = ccp(70,15);
 	restartIconLabel.tag = 1;
 	[restartMenuItem addChild:restartIconLabel];
     
@@ -151,36 +151,45 @@
         pauseLayer.position = CGPointZero;
         [self addChild: pauseLayer z:8];
         
-        _pauseScreen =[[CCSprite spriteWithFile:@"pauseBackground.gif"] retain];
+        _pauseScreen =[[CCSprite spriteWithFile:@"background-menu.png"] retain];
         _pauseScreen.position= ccp(250,150);
         [self addChild:_pauseScreen z:8];
         
         CCMenuItem *ResumeMenuItem = [CCMenuItemImage
-                                      itemFromNormalImage:@"continuebutton.gif" selectedImage:@"continuebutton.gif"
-                                      target:self selector:@selector(ResumeButtonTapped:)];
+                                       itemFromNormalImage:@"menu_button.png" selectedImage:@"menu_button_highlighted.png"
+                                       target:self selector:@selector(ResumeButtonTapped:)];
+        
+        CCLabelTTF* resumeIconLabel = [CCLabelTTF labelWithString:@"Continue" dimensions:CGSizeMake(140, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap fontName:@"Courier" fontSize:20];
+        
+        resumeIconLabel.color = ccc3(255,255,255);
+        resumeIconLabel.position = ccp(70,15);
+        resumeIconLabel.tag = 1;
+        [ResumeMenuItem addChild:resumeIconLabel];
+        
         ResumeMenuItem.position = ccp(250, 230);
         
+        
         CCMenuItem *restartMenuItem = [CCMenuItemImage
-                                       itemFromNormalImage:@"blankbutton.gif" selectedImage:@"blankbutton.gif"
+                                       itemFromNormalImage:@"menu_button.png" selectedImage:@"menu_button_highlighted.png"
                                        target:self selector:@selector(NewGameButtonTapped:)];
         
-        CCLabelTTF* restartIconLabel = [CCLabelTTF labelWithString:@"Restart" dimensions:CGSizeMake(100, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap fontName:@"Courier" fontSize:20];
+        CCLabelTTF* restartIconLabel = [CCLabelTTF labelWithString:@"Restart" dimensions:CGSizeMake(140, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap fontName:@"Courier" fontSize:20];
         
         restartIconLabel.color = ccc3(255,255,255);
-        restartIconLabel.position = ccp(50,25);
+        restartIconLabel.position = ccp(70,15);
         restartIconLabel.tag = 1;
         [restartMenuItem addChild:restartIconLabel];
         
         restartMenuItem.position = ccp(250, 150);
         
         CCMenuItem *QuitMenuItem = [CCMenuItemImage
-                                    itemFromNormalImage:@"blankbutton.gif" selectedImage:@"blankbutton.gif"
+                                    itemFromNormalImage:@"menu_button.png" selectedImage:@"menu_button_highlighted.png"
                                     target:self selector:@selector(MainMenuButtonTapped:)];
         
-        CCLabelTTF* mainMenuIconLabel = [CCLabelTTF labelWithString:@"Main menu" dimensions:CGSizeMake(100, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeWordWrap fontName:@"Courier" fontSize:20];
+        CCLabelTTF* mainMenuIconLabel = [CCLabelTTF labelWithString:@"Main menu" dimensions:CGSizeMake(140, 50) alignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeWordWrap fontName:@"Courier" fontSize:20];
         
         mainMenuIconLabel.color = ccc3(255,255,255);
-        mainMenuIconLabel.position = ccp(50,25);
+        mainMenuIconLabel.position = ccp(70,15);
         mainMenuIconLabel.tag = 1;
         [QuitMenuItem addChild:mainMenuIconLabel];
         
