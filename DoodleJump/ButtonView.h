@@ -15,6 +15,8 @@
     
     CCSprite *buttonSprite;
     id <ButtonViewDelegate> delegate;
+    double startTouchTime;
+    double endTouchTime;
     
 }
 
@@ -26,6 +28,6 @@
 
 @protocol ButtonViewDelegate <NSObject>
 
-- (void)buttonTouchedUpInside:(id)sender;
+- (void)buttonTouchedUpInside:(id)sender forTime:(double)dt;
 
 @end

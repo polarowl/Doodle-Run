@@ -59,9 +59,24 @@
     
 }
 
-- (void)jump
+- (void)jumpWithStrength:(double)strength;
 {
-    if(yVelocity == 0) yVelocity += JUMP_VELOCITY;
+    strength *= 2.5;
+    
+    if(yVelocity == 0) {
+        if (strength > 1)
+        {
+            yVelocity += JUMP_VELOCITY;    
+        }
+        else if (strength < 0.5)
+        {
+            yVelocity += JUMP_VELOCITY * 0.5;    
+        }
+        else yVelocity += JUMP_VELOCITY * strength;    
+    }
+    
+        
+    
     CGPoint aPosition = position;
     aPosition.y += 1;
     position = aPosition;
@@ -71,7 +86,7 @@
 {
     Bullet *newBullet = [[Bullet alloc] initWithIndex:world.currentBulletIndex];
     world.currentBulletIndex +=1 ;
-    CGPoint bulletPosition = CGPointMake(self.position.x, self.position.y + 10);
+    CGPoint bulletPosition = CGPointMake(self.position.x+15, self.position.y + 25);
     newBullet.position = bulletPosition;
     newBullet.xVelocity = 400;
     

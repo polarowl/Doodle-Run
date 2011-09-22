@@ -69,7 +69,7 @@
 
 - (void)updateLevelGroundsFromX:(float)x;
 
-- (void)jump;
+- (void)jumpWithStrength:(double)strength;
 - (void)shoot;
 
 @end

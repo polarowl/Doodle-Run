@@ -24,9 +24,9 @@
         self.position = hero.position;
         
         player = [CCSprite spriteWithFile:@"player.png"];
-        player.scale = 0.5;
+        player.scale = 0.16;
         player.anchorPoint = ccp(0.5, 0.0);
-        player.position = ccp(0,-5);
+        player.position = ccp(0,-2);
         [self addChild:player z:0 tag:1];
  
     }

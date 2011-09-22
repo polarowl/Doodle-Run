@@ -34,7 +34,7 @@
             CCSprite *enemySprite = [CCSprite spriteWithFile:imageName];
             
             enemySprite.position = CGPointMake(enemy.position.x,enemy.position.y);
-            enemySprite.scale = 0.3;
+            enemySprite.scale = 0.4;
             enemySprite.anchorPoint = ccp(0.5,0.1);
                         
             [self.enemyViewDict setValue:enemySprite forKey:[NSString stringWithFormat:@"%d",enemy.index]];
@@ -68,7 +68,7 @@
         CCSprite *enemySprite = [CCSprite spriteWithFile:imageName];
         
         enemySprite.position = CGPointMake(enemy.position.x,enemy.position.y);
-        enemySprite.scale = 0.3;
+        enemySprite.scale = 0.4;
         enemySprite.anchorPoint = ccp(0.5,0.1);
         
         [self.enemyViewDict setValue:enemySprite forKey:[NSString stringWithFormat:@"%d",enemy.index]];    

@@ -55,7 +55,7 @@
 
 @property (retain) World *world;
 
-- (void)jump;
+- (void)jumpWithStrength:(double)strength;
 - (void)shoot;
 - (void)hurt;
 

@@ -54,6 +54,8 @@
 {
     if ([self touchInButtonSprite:touch]) {
         buttonSprite.opacity = 127;
+        startTouchTime = CFAbsoluteTimeGetCurrent();
+        endTouchTime = CFAbsoluteTimeGetCurrent();
         return YES;
     }
     
@@ -74,13 +76,20 @@
     buttonSprite.opacity = 255;
 
     if ([self touchInButtonSprite:touch]) {
-        [delegate buttonTouchedUpInside:self];
+        endTouchTime = CFAbsoluteTimeGetCurrent();
+        
+        [delegate buttonTouchedUpInside:self forTime:(endTouchTime-startTouchTime)];
+        
+        startTouchTime = 0;
+        endTouchTime = 0;
     }
 }
 
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
     buttonSprite.opacity = 255;
+    startTouchTime = 0;
+    endTouchTime = 0;
 }
 
 @end

@@ -60,13 +60,13 @@
     [super dealloc];
 }
 
-- (void)buttonTouchedUpInside:(ButtonView *)sender
+- (void)buttonTouchedUpInside:(id)sender forTime:(double)dt
 {
     if (_deathScreenUp == TRUE) return;
     
     if (sender == jumpButtonView)
     {
-        [world jump];
+        [world jumpWithStrength:dt];
     }
     if (sender == shootButtonView)
     {

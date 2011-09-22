@@ -171,10 +171,19 @@
     // if collision => [hero hurt]
     for (Enemy *enemy in self.enemies)
     {
-        if ( (abs(enemy.position.x - self.hero.position.x) < 5) && (abs(enemy.position.y - self.hero.position.y) < 5) && (self.hero.isHurt == NO) )
+        if ( (self.hero.position.y - enemy.position.y) < 20 && (self.hero.position.y - enemy.position.y) > 2 &&  (abs(enemy.position.x - self.hero.position.x) < 20) && (self.hero.yVelocity < 0 ))
         {
-            [self.hero hurt];            
+            [enemy getShot];
+            [self.enemies removeObject:enemy];                
+            
+            self.hero.gamePoints += GAME_POINTS_FOR_ENEMY;
+            
         }
+        else 
+            if ( (abs(enemy.position.x - self.hero.position.x) < 7) && (abs(enemy.position.y - self.hero.position.y) < 10) && (self.hero.isHurt == NO) )
+            {
+                [self.hero hurt];            
+            }
     }
     
 }
@@ -237,9 +246,9 @@
     }
 }
 
-- (void)jump
+- (void)jumpWithStrength:(double)strength;
 {
-    [self.hero jump];
+    [self.hero jumpWithStrength:strength];
 }
 
 - (void)shoot 
